@@ -21,3 +21,9 @@ C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\ob
 C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.csproj.CopyComplete
 C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.exe
 C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.pdb
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\Database1.mdf
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\Database1_log.ldf
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\EntityFramework.dll
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\EntityFramework.xml
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\EntityFramework.SqlServer.xml

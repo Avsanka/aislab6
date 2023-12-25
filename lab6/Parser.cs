@@ -31,11 +31,6 @@ namespace lab6
             IElement temperature = doc.QuerySelector("span.unit_temperature_c");
             w.Temperature = temperature.TextContent;
 
-            IElement sunrise = doc.QuerySelector("div.now-astro-sunrise div.time");
-            w.Sunrise = sunrise.TextContent;
-
-            IElement sunset = doc.QuerySelector("div.now-astro-sunset div.time");
-            w.Sunset = sunset.TextContent;
 
             IElement desc = doc.QuerySelector("div.now-desc");
             w.Description = desc.TextContent;
@@ -47,6 +42,8 @@ namespace lab6
             {
                 stationsParse(u);
             }
+
+            SaveToDb(w);
         }
 
         public async void stationsParse(string url)
@@ -86,6 +83,15 @@ namespace lab6
                 output.Add($"https://www.gismeteo.ru{a.GetAttribute("href")}");
             }
             return output;
+        }
+
+        public static void SaveToDb(Weather w)
+        {
+            using (WeatherContext context = new WeatherContext())
+            {
+                context.weathers.Add(w);
+                context.SaveChanges();
+            }
         }
     }
 }
