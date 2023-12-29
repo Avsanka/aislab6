@@ -27,9 +27,12 @@ namespace lab6
                         ShowHistory();
                         break;
                     case 3:
-                        Clear();
+                        ShowHistoryRequests();
                         break;
                     case 4:
+                        Clear();
+                        break;
+                    case 5:
                         Environment.Exit(0);
                         break;
                     default:
@@ -39,9 +42,13 @@ namespace lab6
                 }
             }
 
-                
-
-
+            //City c = new City();
+            //c.Name = "Томск";
+            //using (WeatherContext context = new WeatherContext())
+            //{
+            //    context.Cities.Add(c);
+            //    context.SaveChanges();
+            //}
 
         }
 
@@ -49,8 +56,9 @@ namespace lab6
         {
             Console.WriteLine("1 - посмотреть погоду в Томске на сегодня");
             Console.WriteLine("2 - Посмотреть историю погоды");
-            Console.WriteLine("3 - Очистить все записи");
-            Console.WriteLine("4 - Закрыть");
+            Console.WriteLine("3 - Посмотреть историю запросов");
+            Console.WriteLine("4 - Очистить все записи");
+            Console.WriteLine("5 - Закрыть");
             try
             {
                 return Convert.ToInt32(Console.ReadLine());
@@ -79,12 +87,26 @@ namespace lab6
                 var weathers = context.weathers;
                 foreach(Weather w in weathers)
                 {
-                    Console.WriteLine("{0} Было: {1}°C. {2}\n"
-                        , w.Time, w.Temperature, w.Description);
+                    Console.WriteLine("{0} Было: {1}°C. {2}\nСтанций: {3}\n"
+                        , w.Time, w.Temperature, w.Description, w.Stations);
                 }
                 Console.WriteLine("\nНажмите любую клавишу чтобы продолжить");
                 Console.ReadKey();
                 Console.Clear();
+            }
+        }
+
+        public static void ShowHistoryRequests()
+        {
+            using (WeatherContext context = new WeatherContext())
+            {
+                Console.Clear();
+                var hs = context.Histories;
+
+                foreach(History h in hs)
+                {
+                    Console.WriteLine("Запрос ({1}), {0}\n", h.Name, h.Date);
+                }
             }
         }
         public static void Clear()

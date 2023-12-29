@@ -90,6 +90,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="History.cs" />
+    <Compile Include="Migrations\202312251003581_InitialCreate.cs" />
+    <Compile Include="Migrations\202312251003581_InitialCreate.designer.cs">
+      <DependentUpon>202312251003581_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312290542359_Migrate.cs" />
+    <Compile Include="Migrations\202312290542359_Migrate.designer.cs">
+      <DependentUpon>202312290542359_Migrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312290601145_Migration-2.cs" />
+    <Compile Include="Migrations\202312290601145_Migration-2.designer.cs">
+      <DependentUpon>202312290601145_Migration-2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312290630482_Migration-3.cs" />
+    <Compile Include="Migrations\202312290630482_Migration-3.designer.cs">
+      <DependentUpon>202312290630482_Migration-3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
@@ -121,6 +139,20 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202312251003581_InitialCreate.resx">
+      <DependentUpon>202312251003581_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312290542359_Migrate.resx">
+      <DependentUpon>202312290542359_Migrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312290601145_Migration-2.resx">
+      <DependentUpon>202312290601145_Migration-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312290630482_Migration-3.resx">
+      <DependentUpon>202312290630482_Migration-3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

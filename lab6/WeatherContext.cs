@@ -11,5 +11,6 @@ namespace lab6
     {
         public WeatherContext() : base("DbConnection") { }
         public DbSet<Weather> weathers { get; set; }
+        public DbSet<History> Histories { get; set; }
     }
 }

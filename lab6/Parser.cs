@@ -35,15 +35,26 @@ namespace lab6
             IElement desc = doc.QuerySelector("div.now-desc");
             w.Description = desc.TextContent;
 
-            Console.WriteLine(w.GetInfo() + "\n");
+
 
             List<string> stations = await GetLinks(url);
+            int stationCount = 0;
+
             foreach(string u in stations)
             {
                 stationsParse(u);
+                stationCount++;
             }
 
-            SaveToDb(w);
+            w.Stations = stationCount;
+
+            History h = new History();
+            h.Name = w.Name;
+            h.Date = w.Time;
+
+            w.Hs = h;
+            Console.WriteLine(w.GetInfo() + "\n");
+            SaveToDb(w, h);
         }
 
         public async void stationsParse(string url)
@@ -85,11 +96,12 @@ namespace lab6
             return output;
         }
 
-        public static void SaveToDb(Weather w)
+        public static void SaveToDb(Weather w, History h)
         {
             using (WeatherContext context = new WeatherContext())
             {
                 context.weathers.Add(w);
+                context.Histories.Add(h);
                 context.SaveChanges();
             }
         }

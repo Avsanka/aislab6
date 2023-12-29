@@ -27,3 +27,8 @@ C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bi
 C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\EntityFramework.xml
 C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.Migrations.InitialCreate.resources
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.csproj.GenerateResource.cache
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.Migrations.Migrate.resources
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.Migrations.Migration2.resources
+C:\Users\Пользователь\Desktop\files\labs files\labs ais\lab6\lab6\obj\Debug\lab6.Migrations.Migration3.resources

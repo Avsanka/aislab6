@@ -14,12 +14,14 @@ namespace lab6
         public string Time { get; set; }
         public string Temperature { get; set; }
         public string Description { get; set; }
+        public int Stations { get; set; }
+        public History Hs { get; set; }
 
 
         public string GetInfo()
         {
             //return $"Дата: {DateAndTime}, \n Пара: {Name}, \n Преподаватель: {Prepod}, \n Место: {Building}, {Auditoria}"; 
-            return $"{Name} \n{Time} {Temperature}°C\n{Description}";
+            return $"{Name} \n{Time} {Temperature}°C\n{Description}\nСтанций: {Stations}\n";
         }
     }
 }
